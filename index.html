@@ -1,11 +1,292 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claire Qiu</title>
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --card: #ffffff;
+      --maxw: 920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 249, 247, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+
+    .hero {
+      padding: 32px 0 18px;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin: 0 0 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .research-item,
+    .pub-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-item:last-child,
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .research-item h3,
+    .pub-item h3 {
+      margin: 0 0 6px;
+      font-size: 1.06rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .cv-link,
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      margin-left: 8px;
+    }
+
+    .contact-list {
+      padding-left: 18px;
+      margin: 8px 0 0;
+    }
+
+    footer {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px 30px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 2.05rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Claire Qiu</h1>
-  <p>My website is coming soon.</p>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#top">Claire Qiu</a>
+      <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" style="border-top: none;">
+      <h1>Claire Qiu</h1>
+      <p>
+        I am a researcher and clinician interested in mental health, digital intervention,
+        psychotherapy process, and technology-assisted care. Welcome to my personal website.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          Write a short professional bio here. You can introduce your current position,
+          training background, institutional affiliation, and your broader research interests.
+        </p>
+        <p>
+          Example: I am a psychologist and researcher focused on improving mental health care
+          through psychotherapy research, digital tools, and scalable interventions.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>My Research</h2>
+      <div class="card">
+        <div class="research-item">
+          <h3>Research Area 1</h3>
+          <div class="meta">Short theme or lab line</div>
+          <div>
+            Add 2–4 sentences describing this line of work, the main questions you study,
+            and why it matters.
+          </div>
+        </div>
+        <div class="research-item">
+          <h3>Research Area 2</h3>
+          <div class="meta">Methods, population, or application area</div>
+          <div>
+            Add another short paragraph about a second major line of research.
+          </div>
+        </div>
+        <div class="research-item">
+          <h3>Research Area 3</h3>
+          <div class="meta">Optional third area</div>
+          <div>
+            You can keep this section broad or use it to highlight ongoing projects.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="card">
+        <div class="pub-item">
+          <h3>Author, A., & Author, B. (2026). Title of paper. <em>Journal Name</em>.</h3>
+          <div class="meta">Add DOI or PDF link if you want</div>
+          <div>Optional one-line note about the paper.</div>
+        </div>
+        <div class="pub-item">
+          <h3>Author, A., Author, B., & Author, C. (2025). Another paper title. <em>Journal Name</em>.</h3>
+          <div class="meta">Add DOI or PDF link if you want</div>
+          <div>Optional one-line note about the paper.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>My CV</h2>
+      <div class="card">
+        <p>
+          Upload your CV PDF to this repository, then link it here.
+          For example, if you upload a file called <strong>Claire_Qiu_CV.pdf</strong>,
+          you can set the link below to that file.
+        </p>
+        <a class="cv-link" href="Claire_Qiu_CV.pdf" target="_blank">View CV</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="card">
+        <p>I’d be happy to connect regarding research, collaboration, or academic opportunities.</p>
+        <ul class="contact-list">
+          <li>Email: your-email@example.com</li>
+          <li>Google Scholar: add your link</li>
+          <li>LinkedIn: add your link</li>
+          <li>GitHub: add your link</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Claire Qiu. Last updated March 2026.
+  </footer>
 </body>
 </html>
